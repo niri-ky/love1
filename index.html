@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>给我最爱的你</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg');
+            background-size: cover;
+        }
+        .love-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #ff69b4;
+            margin-bottom: 20px;
+        }
+        .love-btn {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+        .love-btn:hover {
+            background-color: #ff1493;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
+        }
+        .heart {
+            font-size: 30px;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="love-box">
+        <h1>TO小九月 <span class="heart">❤️</span></h1>
+        <p>今天与天天开心嘛</p>
+        <p>点按钮查看惊喜哦</p>
+        <button class="love-btn" onclick="showLove()">反复点这里~~</button>
+    </div>
+
+    <script>
+        function showLove() {
+            const messages = [
+                "你是最美的朝霞",
+                "遇见你是我最大的幸运",
+                "你的笑容是我每天的动力源泉",
+                "感谢你走进我的生命",
+                "我会永远陪伴你",
+                "和你在一起的每一天都是lucky day",
+                "愿你与我同在"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            
+            alert(`💌 给最可爱的小九 💌\n\n${randomMessage}\n\n永远在的小宇`);
+        }
+    </script>
+</body>
+</html>
